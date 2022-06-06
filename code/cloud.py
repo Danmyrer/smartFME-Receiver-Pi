@@ -1,7 +1,3 @@
-# TODO
-# - Verbindet sich mit Cloud
-# - Lädt Payload hoch
-
 import asyncio
 from azure.iot.device import Message
 from azure.iot.device.aio import IoTHubDeviceClient
