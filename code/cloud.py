@@ -22,9 +22,11 @@ class Azure:
         await self.client.send_message(message)
         print("[Azure] Message successfully sent!")
 
+#region debug
 def test(dummy):
     payload = '{"A_DATA":"' + dummy + '"}'
     test_Azure = Azure()
     asyncio.run(test_Azure.push_payload(payload))
 
 test("Gruppenruf-1-Weinheim-Einsatz B2.2 LKW-Brand/A61/A61 => Koblenz 316.2 - 318.2, 316.3 - 318.2/54 AK Alzey => 53 Bornheim///19:00:06 2B 19:51 10.Feb")
+#endregion
