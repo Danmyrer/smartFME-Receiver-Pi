@@ -37,6 +37,7 @@ def preProcess(img):
             print(str(i+1) + " / " + str(len(img)))
             cv2.imwrite("closed" + str(i) + ".png", img[i])
             
+#region debug
 def import_dummy():
     print("[preProcess] Importing dummy images")
     path = glob.glob("*.jpg")
@@ -46,7 +47,6 @@ def import_dummy():
         img.append(n)
     return img
 
-#region debug
 os.chdir('git/smartFME-Reciever/code/test_images')
 preProcess(import_dummy())
 #endregion
