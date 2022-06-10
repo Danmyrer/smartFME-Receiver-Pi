@@ -1,3 +1,4 @@
-# TODO
-# - bereitet tesseract-string für upload vor
-# - returns payload
+def buildPayload(data = None):
+    if data == None:
+        data = "99" #Einsatzbeschreibung unbekannt 
+    return '{"A_DATA":"' + data + '"}'
