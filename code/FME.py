@@ -19,6 +19,9 @@ class FME:
         GPIO.setup(button_1, GPIO.IN)
         GPIO.setup(button_2, GPIO.IN)
 
+    def checkAlarm():
+        return GPIO.input(alarm)
+
     def __press(self, button, sleepTime):
         GPIO.output(button, 1)
         time.sleep(sleepTime)
