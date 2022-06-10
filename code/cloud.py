@@ -24,5 +24,5 @@ def test(dummy):
     test_Cloud = Cloud()
     asyncio.run(test_Cloud.push_payload(payload))
 
-test("Gruppenruf-1-Weinheim-Einsatz B2.2 LKW-Brand/A61/A61 => Koblenz 316.2 - 318.2, 316.3 - 318.2/54 AK Alzey => 53 Bornheim///19:00:06 2B 19:51 10.Feb")
+#test("Gruppenruf-1-Weinheim-Einsatz B2.2 LKW-Brand/A61/A61 => Koblenz 316.2 - 318.2, 316.3 - 318.2/54 AK Alzey => 53 Bornheim///19:00:06 2B 19:51 10.Feb")
 #endregion
