@@ -1,1 +1,3 @@
 code/test_images
+tests/__pycache__/*
+.coverage
