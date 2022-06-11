@@ -1,5 +1,4 @@
 import cv2
-import glob
 
 USE_DUMMY = True
 LOG_IMAGES = True

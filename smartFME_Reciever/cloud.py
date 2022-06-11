@@ -1,4 +1,3 @@
-import asyncio
 from azure.iot.device import Message
 from azure.iot.device.aio import IoTHubDeviceClient
 

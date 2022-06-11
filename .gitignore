@@ -3,6 +3,6 @@ tests/__pycache__/*
 .coverage
 smartFME_Reciever/__pycache__/*
 smartFME_Reciever/test_images/*
-smartFME_Reciever/key.py
+smartFME_Reciever/localkey.py
 cov.xml
 .tox/*
