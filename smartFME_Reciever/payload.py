@@ -1,4 +1,4 @@
 def buildPayload(data=None):
     if data is None:
-        data = "999"  # Einsatzbeschreibung unbekannt
+        data = "99"  # Einsatzbeschreibung unbekannt
     return '{"A_DATA":"' + data + '"}'
