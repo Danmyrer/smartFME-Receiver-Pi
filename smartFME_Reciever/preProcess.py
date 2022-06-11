@@ -31,15 +31,3 @@ def preProcess(img):
             print("[preProcess] Logging images", end=" ")
             print(str(i + 1) + " / " + str(len(img)))
             cv2.imwrite("closed" + str(i) + ".png", img[i])
-
-
-# Region debug
-def import_dummy():
-    print("[preProcess] Importing dummy images")
-    path = glob.glob("*.jpg")
-    img = []
-    for i in path:
-        n = cv2.imread(i)
-        img.append(n)
-    return img
-# Endregion

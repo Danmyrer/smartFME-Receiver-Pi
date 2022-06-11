@@ -4,3 +4,5 @@ tests/__pycache__/*
 smartFME_Reciever/__pycache__/*
 smartFME_Reciever/test_images/*
 smartFME_Reciever/key.py
+cov.xml
+.tox/*

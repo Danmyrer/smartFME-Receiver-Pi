@@ -11,6 +11,6 @@ flake8 .
 
 echo "3/3: PyTest"
 
-pytest --cov=smartFME_Reciever
+pytest --cov=smartFME_Reciever --cov-report xml:cov.xml
 
 echo "Alle Tests wurden ausgeführt!"
