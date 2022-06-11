@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "smartFME-Reciever"
+version = "0.1.0"
+description = "Get your FME-Alterts over your Smartphone!"
+authors = ["Danmyrer <dangwrb.09@gmail.com>"]
+packages = [
+    { include = "smartFME_Reciever" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+asyncio = "^3.4.3"
+azure-iot-device = "^2.11.0"
+"RPi.GPIO" = "^0.7.1"
+pytesseract = "^0.3.9"
+opencv-python-headless = "4.6.0.66"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+tox = "^3.25.0"
+pytest = "^7.1.2"
+mypy = "^0.961"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "piwheels"
+url = "https://www.piwheels.org/simple/"
