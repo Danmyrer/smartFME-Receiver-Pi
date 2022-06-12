@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+import RPi.GPIO as io
 import time
 
 alarm = 1
@@ -12,21 +12,21 @@ class FME:
         self.time_short = 0.2
         self.time_long = 1
 
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
+        io.setmode(io.BCM)
+        io.setwarnings(False)
 
-        GPIO.setup(alarm, GPIO.IN)
-        GPIO.setup(button_ok, GPIO.IN)
-        GPIO.setup(button_1, GPIO.IN)
-        GPIO.setup(button_2, GPIO.IN)
+        io.setup(alarm, io.IN)
+        io.setup(button_ok, io.OUT)
+        io.setup(button_1, io.OUT)
+        io.setup(button_2, io.OUT)
 
     def checkAlarm(self):
-        return GPIO.input(alarm)
+        return io.input(alarm)
 
     def __press(self, button, sleepTime):
-        GPIO.output(button, 1)
+        io.output(button, 1)
         time.sleep(sleepTime)
-        GPIO.output(button, 0)
+        io.output(button, 0)
 
     def press_ok(self, short=True):
         if short is True:
