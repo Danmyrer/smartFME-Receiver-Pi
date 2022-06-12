@@ -12,16 +12,12 @@ class FME:
         self.time_short = 0.2
         self.time_long = 1
 
-        try:
-            io.setmode(io.BCM)
-            io.setwarnings(False)
-
-            io.setup(alarm, io.IN)
-            io.setup(button_ok, io.OUT)
-            io.setup(button_1, io.OUT)
-            io.setup(button_2, io.OUT)
-        except RuntimeError:
-            print("Scheinbar verwendest du keinen Raspberry Pi!")
+        io.setmode(io.BCM)
+        io.setwarnings(False)
+        io.setup(alarm, io.IN)
+        io.setup(button_ok, io.OUT)
+        io.setup(button_1, io.OUT)
+        io.setup(button_2, io.OUT)
 
     def checkAlarm(self):
         return io.input(alarm)
