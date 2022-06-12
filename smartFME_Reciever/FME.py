@@ -1,10 +1,10 @@
 import RPi.GPIO as io
 import time
 
-alarm = 1
-button_ok = 2
-button_1 = 3
-button_2 = 4
+alarm = 4
+button_ok = 17
+button_1 = 27
+button_2 = 22
 
 
 class FME:
