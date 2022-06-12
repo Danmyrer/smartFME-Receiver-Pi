@@ -1,12 +1,13 @@
 from unittest import mock
+from unittest.mock import patch
 
 from smartFME_Reciever import FME
-
 
 # region checkAlarm
 @mock.patch("smartFME_Reciever.FME.io.input", return_value=0)
 def test_checkAlarm_false(mock_ioInput):
     assert FME.FME().checkAlarm() == 0
+
 
 
 @mock.patch("smartFME_Reciever.FME.io.input", return_value=1)
