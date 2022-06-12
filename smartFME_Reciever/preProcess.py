@@ -2,10 +2,11 @@ import cv2
 
 USE_DUMMY = True
 LOG_IMAGES = True
+LOG = "[preProcess]"
 
 
 def preProcess(img):
-    print("[preProcess] PreProcessing images")
+    print(f"{LOG} PreProcessing images")
 
     temp = []
     for i in img:
@@ -27,6 +28,6 @@ def preProcess(img):
 
     if LOG_IMAGES is True:
         for i in range(len(img)):
-            print("[preProcess] Logging images", end=" ")
+            print(f"{LOG} Logging images", end=" ")
             print(str(i + 1) + " / " + str(len(img)))
             cv2.imwrite("closed" + str(i) + ".png", img[i])

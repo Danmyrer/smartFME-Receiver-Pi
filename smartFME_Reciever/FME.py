@@ -28,20 +28,20 @@ class FME:
         time.sleep(sleepTime)
         io.output(button, 0)
 
-    def press_ok(self, short=True):
-        if short is True:
+    def press_ok(self, long=False):
+        if long is False:
             self.__press(button_ok, self.time_short)
         else:
             self.__press(button_ok, self.time_long)
 
-    def press_1(self, short=True):
-        if short is True:
+    def press_1(self, long=False):
+        if long is False:
             self.__press(button_1, self.time_short)
         else:
             self.__press(button_1, self.time_long)
 
-    def press_2(self, short=True):
-        if short is True:
+    def press_2(self, long=False):
+        if long is False:
             self.__press(button_2, self.time_short)
         else:
             self.__press(button_2, self.time_long)
