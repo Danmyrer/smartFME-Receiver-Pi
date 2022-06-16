@@ -6,4 +6,3 @@ smartFME_Reciever/test_images/*
 smartFME_Reciever/localkey.py
 cov.xml
 .tox/*
-smartFME_Reciever/test.py

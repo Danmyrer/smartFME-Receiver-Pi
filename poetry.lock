@@ -666,6 +666,19 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "types-mock"
+version = "4.0.15"
+description = "Typing stubs for mock"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "typing-extensions"
 version = "4.2.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -722,7 +735,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "ae278aeb494d2d3a03210fa55a55b95cbbf1f77f45243be6d559719c8008dbf2"
+content-hash = "5469961c9476f0079c09a3b0e4f8aab8cba8e96d59b38bf30e1d21b65b6d5fde"
 
 [metadata.files]
 asyncio = [
@@ -862,6 +875,9 @@ tomli = [
 ]
 tox = [
     {file = "tox-3.25.0-py2.py3-none-any.whl", hash = "sha256:eba63d1048ce0550cce5044bd62b5a74de93888cfe945554bb9ae2e3d1d05ae6"},
+]
+types-mock = [
+    {file = "types_mock-4.0.15-py3-none-any.whl", hash = "sha256:dfbe5ca50450fa8516802727f6e4b0ba761e269c1c3a83bae9d3ed6dab36cdc2"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.2.0-py3-none-any.whl", hash = "sha256:fa30ff068156fd1b6419c12317916cc35b23e3115fabddf46de0dd72abeb2a4a"},

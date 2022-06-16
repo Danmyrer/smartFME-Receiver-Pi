@@ -1,6 +1,5 @@
 from mock import MagicMock, patch
 from unittest import mock
-import pytest
 
 
 MockRPi = MagicMock()
