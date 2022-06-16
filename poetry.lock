@@ -246,6 +246,24 @@ url = "https://www.piwheels.org/simple"
 reference = "piwheels"
 
 [[package]]
+name = "mock"
+version = "4.0.3"
+description = "Rolling backport of unittest.mock for all Pythons"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+build = ["twine", "wheel", "blurb"]
+docs = ["sphinx"]
+test = ["pytest (<5.4)", "pytest-cov"]
+
+[package.source]
+type = "legacy"
+url = "https://www.piwheels.org/simple"
+reference = "piwheels"
+
+[[package]]
 name = "mypy"
 version = "0.961"
 description = "Optional static typing for Python"
@@ -704,7 +722,7 @@ reference = "piwheels"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "3aa4995e2a4e8d93c489aea7eebe6311d138fd87765641fbfce5488f769e2a86"
+content-hash = "ae278aeb494d2d3a03210fa55a55b95cbbf1f77f45243be6d559719c8008dbf2"
 
 [metadata.files]
 asyncio = [
@@ -757,6 +775,9 @@ janus = [
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
+]
+mock = [
+    {file = "mock-4.0.3-py3-none-any.whl", hash = "sha256:122fcb64ee37cfad5b3f48d7a7d51875d7031aaf3d8be7c42e2bee25044eee62"},
 ]
 mypy = [
     {file = "mypy-0.961-py3-none-any.whl", hash = "sha256:9c8f11481b099a57296a5442305b573359eaf5d40b57a4eb2278c2e96ecccc94"},
