@@ -25,7 +25,7 @@ class Listener:
             print(f"{LOG} Alarm wurde um {current_time} ausgelöst")
             smartFME_Monitor.einsatz()
         else:
-            print(f"{LOG} Alarm wurde um {current_time} abgebrochen")
+            print(f"{LOG} Alarm-Listener wurde um {current_time} abgebrochen")
 
     def listener(self):
         while True:
