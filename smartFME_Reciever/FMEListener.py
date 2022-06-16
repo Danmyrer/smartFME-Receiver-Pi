@@ -21,7 +21,7 @@ class Listener:
 
     def __handle_break(self):
         current_time = self.__getTime().strftime("%H:%M:%S")
-        if self.__ist_alarm_aktiv is False:
+        if self.__ist_alarm_aktiv is True:
             print(f"{LOG} Alarm wurde um {current_time} ausgelöst")
             smartFME_Monitor.einsatz()
         else:

@@ -18,3 +18,6 @@ def einsatz(einsatzbeschreibung=False):
         FMEListener.Listener().listener()
     else:
         raise Exception("Einsatzbeschreibungen werden noch nicht Unterstützt")
+
+if __name__ == "__main__":
+    einsatz()

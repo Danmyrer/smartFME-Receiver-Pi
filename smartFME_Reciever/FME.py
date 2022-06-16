@@ -25,7 +25,7 @@ class FME:
     def __press(self, button, sleepTime):
         io.output(button, 1)
         time.sleep(sleepTime)
-        io.output(button, 0)
+        io.output(button, 0)        
 
     def press_ok(self, long=False):
         if long is False:
