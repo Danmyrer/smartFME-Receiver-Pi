@@ -6,3 +6,4 @@ smartFME_Reciever/test_images/*
 smartFME_Reciever/localkey.py
 cov.xml
 .tox/*
+.vscode
