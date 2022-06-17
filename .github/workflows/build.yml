@@ -24,7 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install stdeb
         pip install poetry
-        apt-get install python-stdeb fakeroot python-all
+        sudo apt install python-stdeb fakeroot python-all
     - name: Python-Projekt wird installiert
       run:
         poetry build
