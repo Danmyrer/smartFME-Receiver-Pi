@@ -1,8 +1,7 @@
 import time
 from datetime import datetime, timezone, timedelta
 
-from smartFME_Reciever import FME as FMEInterface
-from smartFME_Reciever import smartFME_Reciever
+from smartFME_Reciever import FME as FMEInterface, smartFME_Reciever
 
 DELAY = 2
 LOG = "[FMEListener]"

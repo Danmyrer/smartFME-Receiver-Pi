@@ -1,0 +1,39 @@
+name: Build (Debian)
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+      strategy:
+        os: [ubuntu-latest]
+        arch: [x86]
+        python-version: [3.9]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Python ${{ matrix.python-version }} wird eingerichtet
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Dependencies werden installiert
+      run: |
+        python -m pip install --upgrade pip
+        pip install stdeb
+        pip install poetry
+        apt-get install python-stdeb fakeroot python-all
+    - name: Python-Projekt wird installiert
+      run:
+        poetry build
+        cd dist/
+        py2dsc *tar.gz
+        cd deb_dist/smartfme-reciever-0.1.0/
+        dpkg-buildpackage -rfakeroot -uc -us
+        cd ..
+        sudo apt install ./*_all.deb
+
+    - name: Scripts werden getestet
+      run:
+        echo ":)"
