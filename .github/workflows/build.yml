@@ -27,12 +27,19 @@ jobs:
         sudo apt install fakeroot debhelper python3-all dh-python
     - name: Python-Projekt wird installiert
       run: |
+        echo "0"
         poetry build
+        echo "1"
         cd dist/
+        echo "2"
         py2dsc *tar.gz
+        echo "3"
         cd deb_dist/smartfme-reciever-0.1.0/
+        echo "4"
         dpkg-buildpackage -rfakeroot -uc -us
+        echo "5"
         cd ..
+        echo "6"
         sudo apt install ./*_all.deb
 
     - name: Scripts werden getestet
