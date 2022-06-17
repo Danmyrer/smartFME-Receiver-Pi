@@ -24,10 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install stdeb
         pip install poetry
-        sudo apt install fakeroot debhelper python3-all
+        sudo apt install fakeroot debhelper python3-all dh-python
     - name: Python-Projekt wird installiert
       run: |
         poetry build
+        poetry install
         cd dist/
         py2dsc *tar.gz
         cd deb_dist/smartfme-reciever-0.1.0/
