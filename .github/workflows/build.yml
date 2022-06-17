@@ -26,7 +26,7 @@ jobs:
         pip install poetry
         sudo apt install fakeroot python-all
     - name: Python-Projekt wird installiert
-      run:
+      run: |
         poetry build
         cd dist/
         py2dsc *tar.gz
@@ -36,5 +36,5 @@ jobs:
         sudo apt install ./*_all.deb
 
     - name: Scripts werden getestet
-      run:
+      run: |
         echo ":)"
