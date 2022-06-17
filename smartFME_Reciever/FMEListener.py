@@ -2,7 +2,7 @@ import time
 from datetime import datetime, timezone, timedelta
 
 from smartFME_Reciever import FME as FMEInterface
-from smartFME_Reciever import smartFME_Monitor
+from smartFME_Reciever import smartFME_Reciever
 
 DELAY = 2
 LOG = "[FMEListener]"
@@ -23,7 +23,7 @@ class Listener:
         current_time = self.__getTime().strftime("%H:%M:%S")
         if self.__ist_alarm_aktiv is True:
             print(f"{LOG} Alarm wurde um {current_time} ausgelöst")
-            smartFME_Monitor.einsatz()
+            smartFME_Reciever.einsatz()
         else:
             print(f"{LOG} Alarm-Listener wurde um {current_time} abgebrochen")
 
@@ -38,6 +38,10 @@ class Listener:
                 print("Keyboard interrupt")
                 break
         self.__handle_break()
+
+
+def run():
+    Listener().listener()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import pytest
-from smartFME_Reciever import smartFME_Monitor as monitor
+from smartFME_Reciever import smartFME_Reciever as monitor
 
 
 def test_einsatz_mitBeschreibung():
