@@ -7,12 +7,14 @@ from smartFME_Reciever import smartFME_Monitor
 DELAY = 2
 LOG = "[FMEListener]"
 
+TEST_ALARM = True
+
 
 class Listener:
     def __init__(self):
         print(f"{LOG} Listener wird gestartet, drücke ctrl+c zum abbrechen")
         self.__FME = FMEInterface.FME()
-        self.__ist_alarm_aktiv = False
+        self.__ist_alarm_aktiv = TEST_ALARM  # False # Default
 
     def __getTime(self):
         timezone_offset = +2  # European-Standard-Time
@@ -38,6 +40,10 @@ class Listener:
                 print("Keyboard interrupt")
                 break
         self.__handle_break()
+
+
+def run():
+    Listener().listener()
 
 
 if __name__ == "__main__":
